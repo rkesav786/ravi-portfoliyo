@@ -1,0 +1,80 @@
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  background: rgba(15, 27, 45, 0.72);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--line);
+}
+
+.nav__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 76px;
+}
+
+.nav__mark {
+  font-family: var(--font-mono);
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.nav__mark-bracket {
+  color: var(--gold);
+}
+
+.nav__links {
+  display: flex;
+  gap: 32px;
+  font-size: 14.5px;
+  color: var(--text-muted);
+}
+
+.nav__links a {
+  position: relative;
+  transition: color 0.25s ease;
+}
+
+.nav__links a:hover {
+  color: var(--text);
+}
+
+.nav__links a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0;
+  height: 1px;
+  background: var(--teal);
+  transition: width 0.25s ease;
+}
+
+.nav__links a:hover::after {
+  width: 100%;
+}
+
+.nav__cta {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  border: 1px solid var(--gold);
+  color: var(--gold);
+  padding: 9px 18px;
+  border-radius: 999px;
+  transition: background 0.25s ease, color 0.25s ease;
+}
+
+.nav__cta:hover {
+  background: var(--gold);
+  color: var(--bg);
+}
+
+@media (max-width: 780px) {
+  .nav__links {
+    display: none;
+  }
+}

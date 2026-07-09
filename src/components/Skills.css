@@ -1,0 +1,61 @@
+.skills__title {
+  font-size: clamp(28px, 3.4vw, 40px);
+  margin-top: 18px;
+  max-width: 560px;
+}
+
+.skills__grid {
+  margin-top: 56px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.skills__group {
+  background: var(--bg-card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 30px 26px;
+  transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.skills__group:hover {
+  border-color: var(--teal);
+  transform: translateY(-4px);
+}
+
+.skills__group h3 {
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.skills__chips {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skills__chip {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  padding: 7px 14px;
+  border-radius: 999px;
+  background: var(--gold-soft);
+  color: var(--gold);
+}
+
+.skills__group:nth-child(3) .skills__chip {
+  background: var(--teal-soft);
+  color: var(--teal);
+}
+
+@media (max-width: 860px) {
+  .skills__grid {
+    grid-template-columns: 1fr;
+  }
+}

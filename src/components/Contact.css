@@ -1,0 +1,43 @@
+.contact__card {
+  border: 1px solid var(--line);
+  border-radius: 28px;
+  padding: 72px 60px;
+  text-align: center;
+  background:
+    radial-gradient(70% 120% at 50% 0%, rgba(242, 169, 59, 0.09), transparent 60%),
+    var(--bg-card);
+}
+
+.contact__title {
+  font-size: clamp(28px, 4vw, 42px);
+  margin-top: 18px;
+}
+
+.contact__body {
+  margin: 26px auto 0;
+  max-width: 520px;
+  color: var(--text-muted);
+  font-size: 16.5px;
+  line-height: 1.7;
+}
+
+.contact__email {
+  display: inline-block;
+  margin-top: 38px;
+  font-family: var(--font-mono);
+  font-size: 18px;
+  color: var(--gold);
+  padding-bottom: 4px;
+  border-bottom: 1px solid var(--gold);
+  transition: opacity 0.25s ease;
+}
+
+.contact__email:hover {
+  opacity: 0.75;
+}
+
+@media (max-width: 640px) {
+  .contact__card {
+    padding: 52px 26px;
+  }
+}
